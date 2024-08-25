@@ -1,0 +1,43 @@
+{
+  "name": "web",
+  "type": "module",
+  "scripts": {
+    "dev": "bunx --bun astro dev --verbose",
+    "start": "bun astro check --verbose && bunx --bun astro dev --verbose",
+    "checker": "conc bun:check:*",
+    "build": "bun astro check --verbose && bunx --bun astro build --verbose",
+    "check:astro": "bun astro check --verbose",
+    "check:format": "bunx @biomejs/biome format . --write"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/html": "^1.0.4",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^22.5.0",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "peerDependencies": {
+    "@repo/tailwind-config": "workspace:*",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/mdx": "^3.1.4",
+    "@astrojs/partytown": "^2.1.1",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/ts-plugin": "^1.10.1",
+    "@fontsource/ubuntu": "^5.0.14",
+    "@radix-ui/react-icons": "^1.3.0",
+    "astro": "^4.14.5",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "concurrently": "^8.2.2",
+    "lucide-react": "^0.436.0",
+    "next-themes": "^0.3.0",
+    "tailwind-merge": "^2.5.2"
+  }
+}

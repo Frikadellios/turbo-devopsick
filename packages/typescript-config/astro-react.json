@@ -1,5 +1,7 @@
 {
-  "extends": "astro/tsconfigs/base",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "astro-react",
+  "extends": "./base.json",
   "compilerOptions": {
     "strictNullChecks": true,
     "lib": ["ESNext", "DOM"],
@@ -18,15 +20,6 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
-    "jsxImportSource": "react",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "plugins": [
-      {
-        "name": "@astrojs/ts-plugin"
-      }
-    ]
+    "jsxImportSource": "react"
   }
 }

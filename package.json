@@ -1,7 +1,7 @@
 {
   "name": "turbo-devopscik",
   "private": "true",
-  "keywords": [],
+  "keywords": ["turborepo", "biomejs", "astro", "bun", "tailwindcss"],
   "author": "Hrihorii Ilin <devopsick@pm.me>",
   "description": "To install dependencies: bun install",
   "repository": {
@@ -13,9 +13,10 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-checker -exclude \"**/node_modules/**\"",
-    "browserslist:update": "bunx update-browserslist-db@latest",
+    "browserslist": "bunx update-browserslist-db@latest",
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "browser": "turbo run browserslist ./apps",
     "lint": "turbo run bunx @biomejs/biome check --fix --unsafe ./packages ./apps"
   },
   "devDependencies": {
@@ -30,9 +31,10 @@
   },
   "dependencies": {
     "caniuse-lite": "^1.0.30001653",
+    "concurrently": "latest",
     "turbo": "latest"
   },
   "packageManager": "bun@1.1.25",
   "workspaces": ["apps/*", "packages/*"],
-  "trustedDependencies": ["@biomejs/biome"]
+  "trustedDependencies": ["@biomejs/biome", "esbuild", "sharp"]
 }
