@@ -1,0 +1,26 @@
+{
+  "name": "@repo/biome-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check:format": "bunx @biomejs/biome format  ./packages ./apps --write",
+    "format": "biome format ./packages ./apps --write",
+    "lints": "biome lint ./packages ./apps",
+    "lint:fix": "biome lint ./packages ./apps --apply",
+    "lint:fix:unsafe": "biome lint ./packages ./apps --apply-unsafe",
+    "biomes": "bunx @biomejs/biome check --write ./packages ./apps",
+    "biomes:fix": "bunx @biomejs/biome check --fix --unsafe ./packages ./apps",
+    "update": "bunx npm-check-updates -ui"
+  },
+  "exports": {
+    "./biome": "./biome.json"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3"
+  }
+}

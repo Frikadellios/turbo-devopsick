@@ -1,0 +1,24 @@
+{
+  "name": "@repo/tailwind-config",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "tailwind:cli": "bunx @tailwindcss/cli@next -i ./tailwind.css -o ./dist/tailwind.css"
+  },
+  "exports": {
+    ".": ["./tailwind.config.js", "./postcss.config.mjs", "./tailwind.css"]
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.0-alpha.20",
+    "@tailwindcss/postcss": "^4.0.0-alpha.20",
+    "@tailwindcss/vite": "^4.0.0-alpha.20",
+    "tailwindcss": "^4.0.0-alpha.20"
+  }
+}

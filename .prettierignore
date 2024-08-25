@@ -1,0 +1,33 @@
+node_modules/
+build/
+public/
+tmp/
+.*/
+bun.lockb
+
+# Benchmark artifacts
+benchmark/projects/
+benchmark/results/
+
+# Deep Directories
+**/dist
+**/smoke
+**/node_modules
+**/fixtures
+**/vendor
+**/.vercel
+
+
+# Directories
+.github
+.changeset
+
+
+# Formatted by Biome
+**/*.json
+**/*.js
+**/*.ts
+**/*.tsx
+**/*.jsx
+**/*.mjs
+**/*.cjs

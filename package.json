@@ -1,0 +1,38 @@
+{
+  "name": "turbo-devopscik",
+  "private": "true",
+  "keywords": [],
+  "author": "Hrihorii Ilin <devopsick@pm.me>",
+  "description": "To install dependencies: bun install",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frikadellios/turbo-devopsick.git"
+  },
+  "engines": {
+    "node": ">=18.19.1 <19 || >=20.15.1 <21 || >=22.6.0"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-checker -exclude \"**/node_modules/**\"",
+    "browserslist:update": "bunx update-browserslist-db@latest",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run bunx @biomejs/biome check --fix --unsafe ./packages ./apps"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@types/bun": "latest",
+    "@types/node": "^22.5.0",
+    "@types/web": "^0.0.157",
+    "editorconfig-checker": "^5.1.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001653",
+    "turbo": "latest"
+  },
+  "packageManager": "bun@1.1.25",
+  "workspaces": ["apps/*", "packages/*"],
+  "trustedDependencies": ["@biomejs/biome"]
+}
