@@ -1,7 +1,14 @@
 {
   "name": "turbo-devopscik",
   "private": "true",
-  "keywords": ["turborepo", "biomejs", "astro", "bun", "tailwindcss"],
+  "keywords": [
+    "turborepo",
+    "biomejs",
+    "astro",
+    "bun",
+    "tailwindcss",
+    "vanilla-framework"
+  ],
   "author": "Hrihorii Ilin <devopsick@pm.me>",
   "description": "To install dependencies: bun install",
   "repository": {

@@ -2,7 +2,7 @@
   "name": "web",
   "type": "module",
   "scripts": {
-    "dev": "bun astro check --verbose && bunx --bun astro dev --verbose",
+    "dev": "bunx --bun astro dev --verbose --port 8080",
     "start": "bun astro check --verbose && bunx --bun astro dev --verbose",
     "checker": "conc bun:check:*",
     "build": "bun astro check --verbose && bunx --bun astro build --verbose",

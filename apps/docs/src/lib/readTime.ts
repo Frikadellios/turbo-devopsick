@@ -4,10 +4,10 @@ import { toString } from 'mdast-util-to-string'
 import { calculateReadingTime } from './readTimeTracker'
 
 export function remarkReadingTime() {
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	return (tree: unknown, { data }: any) => {
-		const textOnPage = toString(tree)
-		const readingTime = calculateReadingTime(textOnPage)
-		data.astro.frontmatter.minutesRead = readingTime
-	}
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  return (tree: unknown, { data }: any) => {
+    const textOnPage = toString(tree)
+    const readingTime = calculateReadingTime(textOnPage)
+    data.astro.frontmatter.minutesRead = readingTime
+  }
 }
