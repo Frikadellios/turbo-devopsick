@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "docs",
   "type": "module",
   "scripts": {
     "dev": "bun astro check --verbose && bunx --bun astro dev --verbose",
@@ -7,40 +7,37 @@
     "checker": "conc bun:check:*",
     "build": "bun astro check --verbose && bunx --bun astro build --verbose",
     "check:format": "bunx @biomejs/biome format . --write",
-    "check:astro": "bun astro check --verbose"
+    "check:astro": "bun astro check --verbose",
+    "editorconfig": "editorconfig-checker -exclude \"**/node_modules/**\""
   },
   "devDependencies": {
-    "@types/bun": "latest",
-    "@types/html": "^1.0.4",
-    "@types/mdx": "^2.0.13",
-    "@types/node": "^22.5.0",
-    "@types/react": "^18.3.4",
-    "@types/react-dom": "^18.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@types/bun": "latest"
   },
   "peerDependencies": {
     "@repo/tailwind-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@repo/biome-config": "workspace:*",
-    "@repo/vanilla-config": "workspace:*",
     "typescript": "^5.0.0"
+  },
+  "overrides": {
+    "astro-expressive-code": "latest"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
     "@astrojs/mdx": "^3.1.4",
-    "@astrojs/partytown": "^2.1.1",
     "@astrojs/react": "^3.6.2",
-    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/starlight": "^0.26.1",
     "@astrojs/ts-plugin": "^1.10.1",
+    "@fontsource/roboto": "^5.0.14",
     "@fontsource/ubuntu": "^5.0.14",
-    "@radix-ui/react-icons": "^1.3.0",
     "astro": "^4.14.5",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "concurrently": "^8.2.2",
-    "lucide-react": "^0.436.0",
-    "next-themes": "^0.3.0",
-    "tailwind-merge": "^2.5.2"
+    "astro-expressive-code": "^0.36.0",
+    "astro-og-canvas": "^0.5.3",
+    "editorconfig-checker": "^5.1.8",
+    "mdast-util-to-string": "^4.0.0",
+    "reading-time": "^1.5.0",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-external-links": "^3.0.0",
+    "sharp": "^0.33.5"
   }
 }

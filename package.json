@@ -16,8 +16,11 @@
     "browserslist": "bunx update-browserslist-db@latest",
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "browser": "turbo run browserslist ./apps",
-    "lint": "turbo run bunx @biomejs/biome check --fix --unsafe ./packages ./apps"
+    "browser": "turbo run browserslist",
+    "lint": "conc bun:lint:*",
+    "lint:format": "bunx @biomejs/biome format . --write",
+    "lint:fix": "bunx @biomejs/biome check . --fix",
+    "lint:check": "bunx @biomejs/biome check ./* --write --unsafe"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",

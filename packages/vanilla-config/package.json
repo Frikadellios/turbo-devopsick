@@ -1,0 +1,32 @@
+{
+  "name": "@repo/vanilla-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": ["./styles.scss"]
+  },
+  "scripts": {
+    "build-css": "sass -w --load-path=node_modules src:dist --style=compressed",
+    "watch-css": "bunx build-css && sass --load-path=node_modules -w src:dist --style=compressed"
+  },
+  "devDependencies": {
+    "@repo/tailwind-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/bun": "latest",
+    "@types/web": "latest",
+    "sass-embedded": "^1.77.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0",
+    "scss": "^0.2.4"
+  },
+  "dependencies": {
+    "@vanilla-extract/css": "^1.15.5",
+    "@vanilla-extract/vite-plugin": "^4.0.15",
+    "vanilla-framework": "^4.15.0"
+  }
+}
